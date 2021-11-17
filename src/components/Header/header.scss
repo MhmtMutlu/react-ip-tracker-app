@@ -19,14 +19,14 @@
 
   &-input-wrapper {
     width: 100%;
-    margin: 20px;
+    margin: 20px 0 40px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
     input {
       width: 30%;
-      padding: 15px 20px;
+      padding: 20px;
       font-size: 18px;
       color: index.$very-dark-gray;
       border: none;
@@ -35,15 +35,15 @@
 
     button {
       font-size: 18px;
-      padding: 15px 20px;
-      background-color: index.$very-dark-gray;
+      padding: 20px 25px;
+      background-color: #000;
       border: none;
       border-radius: 0 15px 15px 0;
       cursor: pointer;
       transition: .5s ease-in;
 
       &:hover {
-        background-color: index.$dark-gray;
+        background-color: index.$very-dark-gray;
       }
     }
   }

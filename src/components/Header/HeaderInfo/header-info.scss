@@ -6,8 +6,8 @@
     z-index: 999;
     width: 80%;
     height: 150px;
-    margin-bottom: -120px;
-    border-radius: 25px;
+    margin-bottom: -130px;
+    border-radius: 15px;
 
     &-container {
       display: flex;
@@ -37,6 +37,7 @@
 
         h2 {
           color: index.$very-dark-gray;
+          font-weight: 600;
           word-wrap: break-word;
           word-break: break-all;
         }
