@@ -1,3 +1,10 @@
+$mobile: 376px;
+$tablet: 768px;
+$desktop: 1440px;
+
+$very-dark-gray: hsl(0, 0%, 17%);
+$dark-gray: hsl(0, 0%, 59%);
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
