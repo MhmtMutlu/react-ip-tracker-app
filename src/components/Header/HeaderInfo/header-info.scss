@@ -1,0 +1,53 @@
+@use "../../../index";
+
+.info {
+  &-wrapper {
+    background-color: #fff;
+    z-index: 999;
+    width: 80%;
+    height: 150px;
+    margin-bottom: -120px;
+    border-radius: 25px;
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      .sections {
+        height: 100%;
+        width: 25%;
+        padding-left: 25px;
+        display: grid; 
+        grid-template-columns: 100%; 
+        grid-template-rows: 0.5fr 1.5fr; 
+        gap: 15px 0px; 
+        grid-template-areas: 
+          "."
+          "."; 
+        
+        h5 {
+          padding-top: 30px;
+          color: index.$dark-gray;
+          font-weight: 600;
+        }
+
+        h2 {
+          color: index.$very-dark-gray;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+      }
+  
+      hr {
+        border:         none;
+        border-left:    1px solid index.$dark-gray;
+        height:         100px;
+        width:          1px;
+      }
+    }
+  }
+}
