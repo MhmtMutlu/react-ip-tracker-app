@@ -1,4 +1,50 @@
-.header-container {
-  grid-area: Header;
-  background-image: url("../../assets/pattern-bg.png");
+@use "../../index";
+
+.header {
+  &-container {
+    grid-area: Header;
+    background-image: url("../../assets/pattern-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-title {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  &-input-wrapper {
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      width: 30%;
+      padding: 15px 20px;
+      font-size: 18px;
+      color: index.$very-dark-gray;
+      border: none;
+      border-radius: 15px 0 0 15px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 15px 20px;
+      background-color: index.$very-dark-gray;
+      border: none;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+      transition: .5s ease-in;
+
+      &:hover {
+        background-color: index.$dark-gray;
+      }
+    }
+  }
 }
