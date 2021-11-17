@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.scss";
 import ArrowLogo from "../../assets/icon-arrow.svg"
+import HeaderInfo from "./HeaderInfo/HeaderInfo";
 
 const Header: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Header: React.FC = () => {
           <img src={ArrowLogo} alt="Button's Arrow Logo"/>
         </button>
       </div>
+      <HeaderInfo />
     </div>
   );
 };
