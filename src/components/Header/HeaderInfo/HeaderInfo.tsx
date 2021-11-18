@@ -1,32 +1,40 @@
-import React from 'react'
-import "./header-info.scss"
+import React, { useContext } from "react";
+import { IPContext } from "../../../contexts/IPContext";
+import "./header-info.scss";
 
 const HeaderInfo: React.FC = () => {
+  const { data } = useContext(IPContext);
+
   return (
-    <div className='info-wrapper'>
-      <div className='info-wrapper-container'>
+    <div className="info-wrapper">
+      <div className="info-wrapper-container">
         <div className="sections">
           <h5>IP ADDRESS</h5>
-          <h2>192.212.174.101</h2>
+          <h2>{data && data.ip}</h2>
         </div>
         <hr />
-        <div className='sections'>
+        <div className="sections">
           <h5>LOCATION</h5>
-          <h2>Brooklyn, NY 10001</h2>
+          <h2>
+            {data &&
+              `${data.location.city && data.location.city + ","} ${
+                data.location.region && data.location.region + ","
+              } ${data.location.country}`}
+          </h2>
         </div>
         <hr />
-        <div className='sections'>
+        <div className="sections">
           <h5>TIMEZONE</h5>
-          <h2>UTC - 05.00</h2>
+          <h2>{data && data.location.timezone}</h2>
         </div>
         <hr />
-        <div className='sections'>
+        <div className="sections">
           <h5>ISP</h5>
-          <h2>SpaceX Starlink</h2>
+          <h2>{data && data.isp}</h2>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeaderInfo
+export default HeaderInfo;

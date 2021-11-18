@@ -15,7 +15,7 @@
   &-title {
     color: #fff;
     font-weight: 500;
-    
+
     @media (max-width: index.$mobile) {
       margin-top: 15px;
       font-size: 26px;
@@ -25,9 +25,6 @@
   &-input-wrapper {
     width: 100%;
     margin: 20px 0 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     @media (max-width: index.$tablet) {
       margin: 20px 0 20px 0;
@@ -37,35 +34,42 @@
       margin: 15px 0 15px 0;
     }
 
-    input {
-      width: 30%;
-      padding: 20px;
-      font-size: 18px;
-      color: index.$very-dark-gray;
-      border: none;
-      border-radius: 15px 0 0 15px;
-      
-      @media (max-width: index.$mobile) {
-        width: 65%;
-        padding: 15px;
-      }
-    }
+    form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    button {
-      font-size: 18px;
-      padding: 20px 25px;
-      background-color: #000;
-      border: none;
-      border-radius: 0 15px 15px 0;
-      cursor: pointer;
-      transition: .5s ease-in;
+      input {
+        width: 30%;
+        padding: 20px;
+        font-size: 18px;
+        color: index.$very-dark-gray;
+        border: none;
+        border-radius: 15px 0 0 15px;
 
-      @media (max-width: index.$mobile) {
-        padding: 15px 25px;
+        @media (max-width: index.$mobile) {
+          width: 65%;
+          padding: 15px;
+        }
       }
 
-      &:hover {
-        background-color: index.$very-dark-gray;
+      button {
+        font-size: 18px;
+        padding: 20px 25px;
+        background-color: #000;
+        border: none;
+        border-radius: 0 15px 15px 0;
+        cursor: pointer;
+        transition: 0.5s ease-in;
+
+        @media (max-width: index.$mobile) {
+          padding: 15px 25px;
+        }
+
+        &:hover {
+          background-color: index.$very-dark-gray;
+        }
       }
     }
   }
