@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/ip-tracker-app-coded-with-reactjs-typescript-and-scss-Csprhsv-G)
 - Live Site URL: [Live Preview](https://react-ip-tracker-app.vercel.app/)
 
 ## My process
