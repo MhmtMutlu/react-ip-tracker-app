@@ -9,7 +9,7 @@ const LocationIcon = new L.Icon({
   shadowUrl: undefined,
   shadowSize: undefined,
   shadowAnchor: undefined,
-  iconSize: new L.Point(60, 75),
+  iconSize: new L.Point(45, 60),
 });
 
 export { LocationIcon };
