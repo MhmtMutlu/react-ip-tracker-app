@@ -31,12 +31,10 @@ const IPContextProvider: React.FC<IContextProvider> = ({ children }) => {
     if (IP_REG_EXP.test(value)) {
       axios(URL + `&ipAddress=${value}`).then((response) => {
         setData(response.data);
-        console.log(response.data);
       });
     } else {
       axios(URL + `&domain=${value}`).then((response) => {
         setData(response.data);
-        console.log(response.data);
       });
     }
   };
