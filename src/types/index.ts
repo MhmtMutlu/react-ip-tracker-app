@@ -5,6 +5,7 @@ export interface IContextProvider {
 export interface IContextInitialState {
   data: IDataObject;
   findData: (data: string) => void;
+  loading: boolean;
 }
 
 export interface IDataObject {
