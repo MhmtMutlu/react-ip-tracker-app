@@ -1,24 +1,27 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./map.scss";
 import { LatLngExpression } from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { LocationIcon } from "./LocationIcon/LocationIcon";
 import { IPContext } from "../../contexts/IPContext";
 
 const Map: React.FC = () => {
   const { data } = useContext(IPContext);
-  const [lat, setLat] = useState(data.location.lat);
-  const [lang, setLang] = useState(data.location.lng);
-  let position: LatLngExpression = [lat, lang];
+  const [position, setPosition] = useState<LatLngExpression>([data.location.lat, data.location.lng])
 
-  console.log("render edildi");
   useEffect(() => {
-    setLat(data.location.lat);
-    setLang(data.location.lng);
+    setPosition([data.location.lat, data.location.lng]);
   }, [data]);
 
+  function CenterMap({ coords }: any) {
+    const map = useMap();
+    map.setView(coords, map.getZoom());
+  
+    return null;
+  }
+
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={position} zoom={12} >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -26,6 +29,7 @@ const Map: React.FC = () => {
       <Marker position={position} icon={LocationIcon}>
         <Popup>You are here now!</Popup>
       </Marker>
+      <CenterMap coords={position}/>
     </MapContainer>
   );
 };
