@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
   IDataObject,
@@ -23,13 +23,13 @@ const IPContextProvider: React.FC<IContextProvider> = ({ children }) => {
   const BASE_URL = "https://geo.ipify.org/api/v2/";
   const URL = `${BASE_URL}country,city?apiKey=${process.env.REACT_APP_API_KEY}`;
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios(URL).then((response) => {
-  //     setData(response.data);
-  //     setLoading(false);
-  //   });
-  // }, [URL]);
+  useEffect(() => {
+    setLoading(true);
+    axios(URL).then((response) => {
+      setData(response.data);
+      setLoading(false);
+    });
+  }, [URL]);
 
   const findData = (value: string) => {
     if (IP_REG_EXP.test(value)) {
@@ -50,7 +50,7 @@ const IPContextProvider: React.FC<IContextProvider> = ({ children }) => {
   const values = {
     data,
     findData,
-    loading,
+    loading
   };
 
   return <IPContext.Provider value={values}>{children}</IPContext.Provider>;
