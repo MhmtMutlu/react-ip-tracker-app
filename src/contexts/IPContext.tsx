@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { IDataObject, IContextInitialState, IContextProvider, InitialLocationState } from "../types";
+import {
+  IDataObject,
+  IContextInitialState,
+  IContextProvider,
+  InitialLocationState,
+} from "../types";
 
 const initialContextState: IContextInitialState = {
   data: InitialLocationState,
@@ -15,6 +20,12 @@ const IPContextProvider: React.FC<IContextProvider> = ({ children }) => {
     /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
   const BASE_URL = "https://geo.ipify.org/api/v2/";
   const URL = `${BASE_URL}country,city?apiKey=${process.env.REACT_APP_API_KEY}`;
+
+  useEffect(() => {
+    axios(URL).then((response) => {
+      setData(response.data);
+    });
+  }, [URL]);
 
   const findData = (value: string) => {
     if (IP_REG_EXP.test(value)) {
