@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Frontend Mentor - IP address tracker solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) coded by Mehmet Mutlu. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Frontend Mentor - IP address tracker solution](#frontend-mentor---ip-address-tracker-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
+- See their own IP address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![Project Image](/public/assets/screenshot1.png)
+![Project Image](/public/assets/screenshot2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/)
+- Live Site URL: [Live Preview](https://react-ip-tracker-app.vercel.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [React](https://reactjs.org/) - JS library
+- [SCSS](https://sass-lang.com/guide) - For styles
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety JS
+- [React Leaflet](https://react-leaflet.js.org/) - Map Library
+- [IPify](https://geo.ipify.org/docs) - IP Geolocation API
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I have made practices about TypeScript, SCSS, ReactJS and ContextAPI. Also, that was the first experience about using maps for me. That's why, I have learned using maps, setting positions and recenter map when positions change.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Continued development
 
-## Learn More
+I would like to learn Next.js and try to code new project with it.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Useful resources
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ReactJS Documents](https://reactjs.org/) - This documents helped me to create Contexts.
+- [SCSS Documents](https://sass-lang.com/guide) - This is an amazing article which helped me SCSS. I'd recommend it to anyone still learning this concept.
+- [React Leaflet Documents](https://react-leaflet.js.org/) - This is very usefull library if you need to use map in your projects.
+
+## Author
+
+- GitHub - [@MhmtMutlu](https://github.com/MhmtMutlu)
+- Frontend Mentor - [@MhmtMutlu](https://www.frontendmentor.io/profile/MhmtMutlu)
+- LinkedIn - [@mehmettmutlu](https://www.linkedin.com/in/mehmettmutlu/)
