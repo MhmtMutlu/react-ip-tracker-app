@@ -32,7 +32,6 @@ Users should be able to:
 
 ### Screenshot
 
-![Project Image](/public/assets/screenshot1.png)
 ![Project Image](/public/assets/screenshot2.png)
 
 ### Links
